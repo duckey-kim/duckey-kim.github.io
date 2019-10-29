@@ -1,4 +1,1 @@
-theme: "jekyll-theme-minimal"
-
-title: "Duckey's Blog"
-description: "for developer"
+remote_theme           : "mmistakes/minimal-mistakes"
