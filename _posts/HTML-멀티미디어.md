@@ -1,0 +1,96 @@
+# 멀티미디어 태그들  
+
+## audio태그  
+**속성**  
+autoplay - 바로 재생  
+controls - 제어 메뉴  
+loop     - 재생이 끝나면 다시 재생  
+preload  - 파일을 로드할지 지정  
+src      - 오디오 파일 url
+muted    - 음소거  
+
+[audiotag MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/audio)  
+```html
+<audio src="https://interactive-examples.mdn.mozilla.net/
+media/examples/t-rex-roar.mp3" controls muted></audio>
+```  
+
+## video 태그  
+동영상 콘텐츠를 삽입한다. mp4파일을 주로 사용  
+**속성**
+autoplay    - 바로 재생  
+controls    - 제어 메뉴  
+crossorigin - 외부페이지에서 가져올때 동일안 출처 확인  
+loop        - 다시 재생  
+muted       - 음소거  
+poster      - 동영상 썸네일 이미지 URL  
+preload     - 페이지 로드시 동영상 로드할지의 지정  
+src         - 콘텐츠 URL  
+width       - 영상의 가로 너비  
+height      - 영상의 세로 너비  
+
+[video tag MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Video)  
+
+```html
+<video src="https://interactive-examples.mdn.mozilla.net
+/media/examples/flower.webm"
+autoplay controls loop muted  자동재생,menu,다시재생,음소거 상태
+poster="./iamges/heropy.png"> 포스터 이미지의 주소
+</video>
+```
+
+<video src="https://interactive-examples.mdn.mozilla.net
+/media/examples/flower.webm"
+autoplay controls loop muted  ></video>  
+
+## figure , figcaption태그  
+이미지와 이미지의 설명등을 묶어주는 영역을 설정한다.  
+
+```html
+<img src="./images/heropy.png" alt="헤로피 이미지">
+    <p>헤로피 이미지 입니다.</p>
+```  
+figure와 figcaption을 활용하여 바꾼다.  
+
+```html
+   <figure>
+        <img src="./images/heropy.png" alt="헤로피 이미지입니다.">
+        <figcaption>해로피 이미지 입니다.</figcaption>
+    </figure>
+```
+p태그를 figcaption으로 바꾸어서 브라우저가 img와  
+img에대한 설명하는 구조라는 것을 알게 해준다.  
+
+### iframe 태그
+다른 html페이지를 현재 페이지에 삽입한다.  
+보안적인 이슈가 있다.  
+  
+
+**속성**  
+name        - 프레임의 이름  
+src         - 동영상의 url  
+frameborder - 외각선 0,1
+width       - 가로너비  
+height      - 세로너비  
+sandbox     - 보안강화용 allow-script
+
+
+```html
+    <div>
+        <img src="./images/heropy.png" alt="사진">
+    </div>
+    <div>
+        <iframe src="https://fastcampus.co.kr" frameborder="0" width="70%"
+        height="400px" style="border: 2px solid red"></iframe>
+    </div>
+```  
+### canvas 태그  
+Canvas API , WebGL API를 사용하여 그래픽이나  
+애니메이션을 랜더링 하는 영역를 지정한다.  
+
+**속성**
+width   - 캔버스의 가로 너비  
+height  - 캔버스의 세로 너비  
+
+[Canvas tag MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Canvas/Tutorial/Basic_usage)  
+  
