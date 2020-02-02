@@ -31,7 +31,7 @@ border:2px solid red;
 }
 ```  
 
-clearfix와 float은 없앤우 .container에 `display:flex;`만 부여하면 해결된다.  
+clearfix와 float은 없앤 후 .container에 `display:flex;`만 부여하면 해결된다.  
 기본구조는 container 가 부모요소이고 item이 자식요소 라는 느낌으로 배워보자.  
 
 ## Flex container  
