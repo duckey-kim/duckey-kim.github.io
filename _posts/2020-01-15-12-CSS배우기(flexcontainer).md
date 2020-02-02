@@ -64,6 +64,7 @@ container 자체의 속성이 block,inline요소로 인식이 된다.
 |`flex-wrap`|item들의 묶음할 줄의 수 설정|nowrap|  
 
 #### flex-direction  
+
 **수평정렬**  
 row : item들을 수평으로 정렬한다(왼쪽정렬)  
 row-reverse: row의 반대  
@@ -72,7 +73,22 @@ column: item들을 수직으로 정렬한다.(위에서 아래로)
 column-reverse : 아래서 위로 정렬  
 
 ***수평정렬과 수직정렬은 주축,교차축이 된다.(상대적개념)***  
-각 정렬의 시작점과 끝점은 reverse에 따라 다르다.
+각 정렬의 시작점과 끝점은 reverse에 따라 다르다.  
+
+### flex-wrap  
+items의 여러줄 묶음을 설정한다.  
+
+|값|의미|기본값|
+|:---|:---|:---|
+|`nowrap`|item들을 무조건**한 줄**에 묶음|nowrap|  
+|`wrap`|item들을 여러 줄로 묶음 `container`의 크기에 맞춤| |
+|`wrap-reverse`|역방향으로 여러 줄로 묶음| |  
+
+container의 안에 있는 item들은 width,height의 값이 가변할 수 있다.  
+
+
+
+
 
 
 
