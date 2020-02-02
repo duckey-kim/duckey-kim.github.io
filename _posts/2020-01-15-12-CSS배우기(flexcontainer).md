@@ -86,7 +86,42 @@ items의 여러줄 묶음을 설정한다.
 
 container의 안에 있는 item들은 width,height의 값이 가변할 수 있다.  
 
+### justify-content  
+주 축의 정렬 방법을 설정한다.  
 
+|값|의미|기본값|
+|:---|:---|:---|
+|`flex-start`|item의 시작점으로 정렬|`flex-start`|  
+|`flex-end`|item를 끝점으로 정렬| |
+|`center`|item들을 가운데 정렬한다.| |
+|`space-between`|시작점에서 시작 마지막을 끝점으로 정렬하고 사이는 고르게 정렬| |  
+|`space-around`|item들이 균등한 공간을 가지고 정렬| |  
+
+### align-content  
+교차 축의 정렬 방법을 설정한다. 단! `flex-wrap:wrap;` 의 속성을 통해 items가 2줄이상이고 여백이 있어야한다.  
+items가 한 줄이면 `align-items`을 사용한다.  
+
+|값|의미|기본값|
+|:---|:---|:---|
+|`stretch`|item의 교차축의 크기를 늘리어서 사용한다.|`stretch`|
+|`flex-start`|item의 교차축의 시작점으로 정렬| |  
+|`flex-end`|item를 교차축의 끝점으로 정렬| |
+|`center`|item들을 교차축의 가운데 정렬한다.| |
+|`space-between`|시작점에서 시작 마지막을 끝점으로 정렬하고 사이는 고르게 정렬| |  
+|`space-around`|item들이 균등한 공간을 가지고 정렬| |  
+
+
+### align-items  
+교차 축에서 items의 정렬 방법을 설정한다. items이 두 줄 이상이라면 우선적으로 `align-content`가 적용되어야한다. 한 줄이때만 사용하는 것이 좋다.
+
+
+|값|의미|기본값|
+|:---|:---|:---|
+|`stretch`|item의 교차축의 크기를 늘리어서 사용한다.|`stretch`|
+|`flex-start`|item의 교차축의 시작점으로 정렬| |  
+|`flex-end`|item를 교차축의 끝점으로 정렬| |
+|`center`|item들을 교차축의 가운데 정렬한다.| |
+|`baseline`|items를 문자선에 정렬한다.||
 
 
 
