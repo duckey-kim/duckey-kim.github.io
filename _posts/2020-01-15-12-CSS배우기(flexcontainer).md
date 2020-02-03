@@ -97,6 +97,19 @@ container의 안에 있는 item들은 width,height의 값이 가변할 수 있�
 |`space-between`|시작점에서 시작 마지막을 끝점으로 정렬하고 사이는 고르게 정렬| |  
 |`space-around`|item들이 균등한 공간을 가지고 정렬| |  
 
+예제)justify-content의 예제  
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="duckey-kim" data-slug-hash="WNbVzGz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="justify-content">
+  <span>See the Pen <a href="https://codepen.io/duckey-kim/pen/WNbVzGz">
+  justify-content</a> by duckey-kim (<a href="https://codepen.io/duckey-kim">@duckey-kim</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>  
+
+items들의 height은 설정하지 않았다. `align-content:stretch`가 기본값이기 때문에 items의 height이 container의 height까지 늘어난 것을 확인 할 수 있다.  
+
+
+
 ### align-content  
 교차 축의 정렬 방법을 설정한다. 단! `flex-wrap:wrap;` 의 속성을 통해 items가 2줄이상이고 여백이 있어야한다.  
 items가 한 줄이면 `align-items`을 사용한다.  
