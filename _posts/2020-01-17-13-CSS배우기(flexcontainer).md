@@ -26,8 +26,13 @@ container안의 items들은 width을 지정해주지 않으면 가변되는 widt
 ### flex-shrink  
 
 item이 감소하는 너비의 비율을 설정한다. 숫자가 클수록 더 많은 너비가 감소한다.  
-단! item이 가변 너비가 아니거나(width지정X), 값이 0일 경우 효과가 없다.  
+단! item이 가변 너비가 아니거나(width지정X), 값이 0일 경우 효과가 없다. `flex-grow`을 더 자주 활용한다.  
 ```css
 flex-shrink:감소너비;
 ```  
 
+### flex-basis  
+item의 공간 배분 하기 전의 기본 너비를 설정한다.  
+`flex-basis:auto;` 또는 `flex-basis:기본너비;`를 입력하지 않으면 `flex-basis:0;`으로 설정된다.  
+
+![basis](https://heropy.blog/images/screenshot/css-flexible-box/flex-basis.jpg "basis설명")
