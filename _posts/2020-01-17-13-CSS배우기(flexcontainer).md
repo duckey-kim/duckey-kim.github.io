@@ -34,5 +34,6 @@ flex-shrink:감소너비;
 ### flex-basis  
 item의 공간 배분 하기 전의 기본 너비를 설정한다.  
 `flex-basis:auto;` 또는 `flex-basis:기본너비;`를 입력하지 않으면 `flex-basis:0;`으로 설정된다.  
+획일적인 비율로 item을 만들고 싶으면 basis의 값을 0으로 하는 것이 좋다.   
 
 ![basis](https://heropy.blog/images/screenshot/css-flexible-box/flex-basis.jpg "basis설명")

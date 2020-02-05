@@ -1,6 +1,15 @@
 # CSS FLEX  
 
 **목차**  
+- [flexcontainer](#Flexcontainer)
+- [display](#display)
+- [flexgrow](#flex-flow)
+- [flex-direction](#flex-direction)
+- [flex-wrap](#flex-wrap)
+- [justify-content](#justify-content)
+- [align-content](#align-content)
+- [align-items](#align-items) 
+
 
 
 요소들을 수평정렬할때 지금까지 활용했던 방법은  
@@ -34,7 +43,7 @@ border:2px solid red;
 clearfix와 float은 없앤 후 .container에 `display:flex;`만 부여하면 해결된다.  
 기본구조는 container 가 부모요소이고 item이 자식요소 라는 느낌으로 배워보자.  
 
-## Flex container  
+## Flexcontainer  
   
 |속성|의미|  
 |:---|:---|
