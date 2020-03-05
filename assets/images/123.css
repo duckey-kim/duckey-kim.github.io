@@ -1,0 +1,34 @@
+.sectionWrap {
+    display: flex;
+
+    margin: 10px;
+    position: relative;
+
+
+}
+
+.sectionWrap .Ad {
+    width: 1fr;
+    
+}
+
+.sectionWrap .leftAd {
+    background: tomato;
+    left: 0;
+    width: 100px;
+}
+
+.sectionWrap section {
+    width: 8fr;
+    height: 600px;
+    background: lightblue;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sectionWrap .rightAd {
+    background: lightpink;
+    width: 100px;
+    position:fixed;
+    right: 0;
+}
