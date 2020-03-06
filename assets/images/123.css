@@ -2,37 +2,24 @@
     display:grid;
     grid-template-columns:100px 1fr 100px;
     grid-template-rows:600px;
-
     margin: 10px;
-    
-  
-
-
 }
 .sectionWrap .Ad{
     position:relative;
 }
-.sectionWrap .leftAd {
-   
-}
+
 
 .sectionWrap section{
-    
-
     background: lightblue;
     margin-left: 10px;
     margin-right: 10px;
-    justify-content:stretch;
-    align-content:stretch;
+   
 }
 
-.sectionWrap .rightAd {
-    
-}
+
 .Ad .adbox{
     width: 100px;
     height: 600px;
     position:fixed;
     background:tomato;
-
 }
