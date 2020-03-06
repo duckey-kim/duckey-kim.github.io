@@ -1,34 +1,38 @@
 .sectionWrap {
-    display: flex;
+    display:grid;
+    grid-template-columns:100px 1fr 100px;
+    grid-template-rows:600px;
 
     margin: 10px;
-    position: relative;
-
-
-}
-
-.sectionWrap .Ad {
-    width: 1fr;
     
-}
+  
 
+
+}
+.sectionWrap .Ad{
+    position:relative;
+}
 .sectionWrap .leftAd {
-    background: tomato;
-    left: 0;
-    width: 100px;
+   
 }
 
-.sectionWrap section {
-    width: 8fr;
-    height: 600px;
+.sectionWrap section{
+    
+
     background: lightblue;
     margin-left: 10px;
     margin-right: 10px;
+    justify-content:stretch;
+    align-content:stretch;
 }
 
 .sectionWrap .rightAd {
-    background: lightpink;
+    
+}
+.Ad .adbox{
     width: 100px;
+    height: 600px;
     position:fixed;
-    right: 0;
+    background:tomato;
+
 }
