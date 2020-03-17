@@ -11,3 +11,10 @@ bootstrap을 활용하면 내가 원하는 내용의 형태를 끌어다 땡겨 
 *예제* 만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다. 
 쉽게생각해서 12 나누기 원하는 갯수의 열을 나누어주고 사용하자  
 
+## grid option  
+
+||모바일 768px이하|태블릭 768px이상|데스크탑 992px이상|큰기기 1200px이상|
+|**grid**|항상|768px이상이면 |992px이상이면|1200px이상이면|
+|**container width**|auto|750px|970px|1170px|
+|**column width**|auto|~62px|~81px|~97px|
+|**class name**|`.col-xs-숫자`|`.col-sm-숫자`|`.col-md-숫자`|`.col-lg-숫자`|
