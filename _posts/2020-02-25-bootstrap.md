@@ -2,13 +2,19 @@
 배우고 인터넷 서칭을 하면서 필요한 부분을 활용하여 홈페이지를 만들어 보았지만 완성된 모습을 보면 다음홈페이지에 비해 형편이 없다.  
 bootstrap을 활용하면 내가 원하는 내용의 형태를 끌어다 땡겨 올 수 있기때문에 이번에는 bootstrap을 한번 활용하여 나만의 사이트?를 다시 만들어 보려고 한다. 이 글에는 내가 bootstrap을 활용하면서 느끼거나 특징적인 부분을 적어보려고 한다.  
 
+## 주의점!!  
+**bootstrap의 버전 check!!**  
+bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](http://bootstrapk.com/getting-started/)site은 버전이 3.3.2이고 영어 버전의[bootstrap-english](https://getbootstrap.com/)site의 버전은 4.4.1이다 . 처음에는 3.3.2로 작성하였다가 다른 bootstrap library사용하면서 영어버전의 사이트를 활용하다보니 3.3.2버전의 library가 안먹히는 경우가 생겼다.  
+
+
 ## mobile 우선적  
 적절한 렌더링과 확대/축소를 위해 `viewport`메타 태그가 추가되어 있다.  
 `container`의 형태도 2가지 이다. 반응형 콘테이너는 `.container` 최대폭 컨테이너는 `.container-fluid`를 활용한다.  
 
 ## grid system 12 columns  
 부트스트랩은 기기나 뷰포트 크기가 증가함에 따라 **12열이** 적절하게 확대되는 반응형, 모바일 우선 유동 그리드 시스템입니다. 그것은 쉬운 레이아웃을 위해 미리 정해진 클래스들 뿐만 아니라 강력한 더 시멘틱한 레이아웃을 생성하기 위한 믹스인 을 포함하고 있습니다.  
-*예제* 만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다. 
+
+***예제*** >>만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다. 
 쉽게생각해서 12 나누기 원하는 갯수의 열을 나누어주고 사용하자  
 
 ## grid option  
@@ -18,3 +24,115 @@ bootstrap을 활용하면 내가 원하는 내용의 형태를 끌어다 땡겨 
 |**container width**|auto|750px|970px|1170px|
 |**column width**|auto|~62px|~81px|~97px|
 |**class name**|`.col-xs-숫자`|`.col-sm-숫자`|`.col-md-숫자`|`.col-lg-숫자`|
+
+## 사용하려는 bootstrap  
+ -[container](#container)
+ -[nav-pills](#pills)
+ -[row&columns](#row&columns)
+ -[table](#table)
+
+## container  
+우리가 사용하던 `container`들은 items들을 wrap 하는데 많이 사용한다. bootstrap에서도 그런 용도로 사용되며 **반응형**으로 사용되는 `container`의 종류에는  2개가 있다.  
+1. `container` : 반응형으로써 media의 화면 크기의 따라서 크기가 정해져있다.  
+2. `container-fluid` : 반응형으로써 media의 화면 크기에 가득 채운다.  
+
+
+## pills 
+`html5`에서 `nav`태그는 네비게이션 역할을 담당한다. `div`태그로 생성은 할 수 있지만 다른사람들에게도 통용되는 `nav`태그를 사용하였다.  
+`nav`의 종류에서도 bootstrap에서 `nav-pills`형태의 라이브러리를 활용한다.
+
+```html
+<div class="container-fluid">                             가득찬 container
+  <div class="row">                                       한줄만 사용
+    <div class="col-sm-10">
+       <nav class="nav nav-pills ">                        nav중에서도 pills nav 사용
+         <a class="nav-link" href="nav1.html">Nav 1</a>
+         <a class="nav-link" href="nav2.html">Nav 2</a>
+         <a class="nav-link" href="nav3.html">Nav 3</a>
+        <a class="nav-link" href="nav4.html">Nav 4</a>        
+      </nav>
+    </div>
+  </div>
+</div>
+```  
+
+
+## row&columns  
+ - `row` 클래스는 container나 container-fluid 안에 있어야 정상적인 배열이나 패팅을 지원해준다.  
+ - 12개의 `column`을 over 하게되면 새로운 줄로 column이 배치된다.  
+ - 내용은 작성하는 곳은 `row`가 아닌 `column`이 되어야 한다!  
+
+
+
+### 계획과 실행  
+
+홈페이지에 들어왔을 때 4개의 메뉴에 최신 게시물들을 보여주는 board를 만들고 싶다.  
+그래서 하나의 row에 2개의 column이 들어가는 row로 형성하려고 한다. 그래서 2개의 row를 만들려고 했지만 어차피 viewport 또는 media의 크기에 따라 2개의 행일 될 수 도 있고 1개의 행이 될 수 도 있다. 그렇기 때문에 1개의 row로 묶어도 되고 2개의 row로 묶어도 된다. 
+어차피 한개의 row는 12개의 columns으로 이루어져 있고 그것을 넘어가면 auto-flow가 되기 때문이다.  
+
+
+```html
+<div class="container-fluid"> 4개의 게시판을 보여주는 container
+  <div class="row">           1개의 row
+    <div class="col-sm-6">   sm크기의 6개의 행을 쓰겠다.
+      <table class="table"> 
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <table class="table">
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <table class="table">
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <table class="table">
+      </table>
+    </div>
+  </div>
+</div>
+```  
+
+
+## table
+
+```html
+<table class="table table-borderless table-hover">
+    <thead>
+        <tr>
+            <td colspan="3" class="alert alert-info"><a href="">Menu1</a></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">게시글123123123123123123</th>
+            <td>작성자</td>
+            <td class="text-right">
+                작성날짜
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">게시글123123123123123123</th>
+            <td>작성자</td>
+            <td class="text-right">
+                작성날짜
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">게시글123123123123123123</th>
+            <td>작성자</td>
+            <td class="text-right">
+                작성날짜
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">게시글123123123123123123</th>
+            <td>작성자</td>
+            <td class="text-right">
+                작성날짜
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
