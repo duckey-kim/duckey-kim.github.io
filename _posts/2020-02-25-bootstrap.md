@@ -98,8 +98,8 @@ bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](htt
 ## table
 
 ```html
-<table class="table table-borderless table-hover">
-    <thead>
+<table class="table table-borderless table-hover">    border 없는 table
+    <thead>                                           hover되는 table
         <tr>
             <td colspan="3" class="alert alert-info"><a href="">Menu1</a></td>
         </tr>
