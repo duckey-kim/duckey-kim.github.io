@@ -6,15 +6,32 @@ bootstrap을 활용하면 내가 원하는 내용의 형태를 끌어다 땡겨 
 **bootstrap의 버전 check!!**  
 bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](http://bootstrapk.com/getting-started/)site은 버전이 3.3.2이고 영어 버전의[bootstrap-english](https://getbootstrap.com/)site의 버전은 4.4.1이다 . 처음에는 3.3.2로 작성하였다가 다른 bootstrap library사용하면서 영어버전의 사이트를 활용하다보니 3.3.2버전의 library가 안먹히는 경우가 생겼다.  
 
+## 내가 작성한 HTML에 bootstrap 적용시키기  
+bootstrap은 다양한 클래스를 통해서 css를 적용시킬 수 있는 라이브러리 라고 생각할 수 있다. 그 라이브러리를 불러오기위해서는 bootstrapCDN을 활용하면 된다.  
+1. `html`의 `head`부분에 link태그를 통해 `bootstrap`의 `css`파일을 불러온다.  
+```html
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+```  
+2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/)[popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.
+```html
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+```  
+
 
 ## mobile 우선적  
-적절한 렌더링과 확대/축소를 위해 `viewport`메타 태그가 추가되어 있다.  
+media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 확대/축소를 위해 `viewport`메타 태그가 추가되어 있다.  
 `container`의 형태도 2가지 이다. 반응형 콘테이너는 `.container` 최대폭 컨테이너는 `.container-fluid`를 활용한다.  
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+```
 
 ## grid system 12 columns  
 부트스트랩은 기기나 뷰포트 크기가 증가함에 따라 **12열이** 적절하게 확대되는 반응형, 모바일 우선 유동 그리드 시스템입니다. 그것은 쉬운 레이아웃을 위해 미리 정해진 클래스들 뿐만 아니라 강력한 더 시멘틱한 레이아웃을 생성하기 위한 믹스인 을 포함하고 있습니다.  
 
-***예제*** >>만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다. 
+***예제***  
+만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다. 
 쉽게생각해서 12 나누기 원하는 갯수의 열을 나누어주고 사용하자  
 
 ## grid option  
@@ -26,10 +43,12 @@ bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](htt
 |**class name**|`.col-xs-숫자`|`.col-sm-숫자`|`.col-md-숫자`|`.col-lg-숫자`|
 
 ## 사용하려는 bootstrap  
- -[container](#container)
- -[nav-pills](#pills)
- -[row&columns](#row&columns)
- -[table](#table)
+
+ -[container](#container)  
+ -[button](#button)  
+ -[nav-pills](#pills)  
+ -[row&columns](#row&columns)  
+ -[table](#table)  
 
 ## container  
 우리가 사용하던 `container`들은 items들을 wrap 하는데 많이 사용한다. bootstrap에서도 그런 용도로 사용되며 **반응형**으로 사용되는 `container`의 종류에는  2개가 있다.  
@@ -62,6 +81,8 @@ bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](htt
  - 12개의 `column`을 over 하게되면 새로운 줄로 column이 배치된다.  
  - 내용은 작성하는 곳은 `row`가 아닌 `column`이 되어야 한다!  
 
+## button  
+`<button>`태그만이 아닌 `<a>`,`<input>` 태그에서도 `button`태그의 요소를 활용할 수 있다. `.btn`을 사용하여 `<a>`태그에 `.btn`클래스를 부여하면 사이트를 이어주는 역활을 할 수 있는 **Button**으로 구현이 된다.  
 
 
 ### 계획과 실행  
