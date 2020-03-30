@@ -3,16 +3,20 @@
 bootstrap을 활용하면 내가 원하는 내용의 형태를 끌어다 땡겨 올 수 있기때문에 이번에는 bootstrap을 한번 활용하여 나만의 사이트?를 다시 만들어 보려고 한다. 이 글에는 내가 bootstrap을 활용하면서 느끼거나 특징적인 부분을 적어보려고 한다.  
 
 ## 주의점!!  
-**bootstrap의 버전 check!!**  
-bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](http://bootstrapk.com/getting-started/)site은 버전이 3.3.2이고 영어 버전의[bootstrap-english](https://getbootstrap.com/)site의 버전은 4.4.1이다 . 처음에는 3.3.2로 작성하였다가 다른 bootstrap library사용하면서 영어버전의 사이트를 활용하다보니 3.3.2버전의 library가 안먹히는 경우가 생겼다.  
+**bootstrap의 버전 check!**  
+
+bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](http://bootstrapk.com/getting-started/)은 버전이 3.3.2이고 영어 버전의[bootstrap-english](https://getbootstrap.com/)의 버전은 4.4.1이다 . 처음에는 3.3.2로 작성하였다가 다른 bootstrap library사용하면서 영어버전의 사이트를 활용하다보니 3.3.2버전의 library가 안먹히는 경우가 생겼다.  
 
 ## 내가 작성한 HTML에 bootstrap 적용시키기  
 bootstrap은 다양한 클래스를 통해서 css를 적용시킬 수 있는 라이브러리 라고 생각할 수 있다. 그 라이브러리를 불러오기위해서는 bootstrapCDN을 활용하면 된다.  
-1. `html`의 `head`부분에 link태그를 통해 `bootstrap`의 `css`파일을 불러온다.  
+ 1. `html`의 `head`부분에 link태그를 통해 `bootstrap`의 `css`파일을 불러온다.  
+
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 ```  
-2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/)[popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.
+
+ 2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/)[popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.  
+
 ```html
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -48,7 +52,7 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
  -[nav-pills](#pills)  
  -[row-columns](#row-columns)  
  -[table](#table)  
- 
+
 
 ## container  
 우리가 사용하던 `container`들은 items들을 wrap 하는데 많이 사용한다. bootstrap에서도 그런 용도로 사용되며 **반응형**으로 사용되는 `container`의 종류에는  2개가 있다.  
