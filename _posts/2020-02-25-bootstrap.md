@@ -43,12 +43,12 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 |**class name**|`.col-xs-숫자`|`.col-sm-숫자`|`.col-md-숫자`|`.col-lg-숫자`|
 
 ## 사용하려는 bootstrap  
-
  -[container](#container)  
  -[button](#button)  
  -[nav-pills](#pills)  
- -[row&columns](#row-columns)  
+ -[row-columns](#row-columns)  
  -[table](#table)  
+ 
 
 ## container  
 우리가 사용하던 `container`들은 items들을 wrap 하는데 많이 사용한다. bootstrap에서도 그런 용도로 사용되며 **반응형**으로 사용되는 `container`의 종류에는  2개가 있다.  
@@ -76,7 +76,7 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 ```  
 
 
-## row&columns  
+## row-columns  
  - `row` 클래스는 container나 container-fluid 안에 있어야 정상적인 배열이나 패팅을 지원해준다.  
  - 12개의 `column`을 over 하게되면 새로운 줄로 column이 배치된다.  
  - 내용은 작성하는 곳은 `row`가 아닌 `column`이 되어야 한다!  
