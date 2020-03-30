@@ -15,7 +15,7 @@ bootstrap은 다양한 클래스를 통해서 css를 적용시킬 수 있는 라
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 ```  
 
- 2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/)[popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.  
+ 2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/) 와 [popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.  
 
 ```html
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
