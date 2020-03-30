@@ -47,7 +47,7 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
  -[container](#container)  
  -[button](#button)  
  -[nav-pills](#pills)  
- -[row&columns](#row&columns)  
+ -[row&columns](#row-columns)  
  -[table](#table)  
 
 ## container  
