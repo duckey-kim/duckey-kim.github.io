@@ -86,6 +86,8 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
  - 내용은 작성하는 곳은 `row`가 아닌 `column`이 되어야 한다!  
 
 ## button  
+[button](https://getbootstrap.com/docs/4.4/components/buttons/)  
+
 `<button>`태그만이 아닌 `<a>`,`<input>` 태그에서도 `button`태그의 요소를 활용할 수 있다. `.btn`을 사용하여 `<a>`태그에 `.btn`클래스를 부여하면 사이트를 이어주는 역활을 할 수 있는 **Button**으로 구현이 된다.  
 
 
@@ -99,8 +101,8 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 ```html
 <div class="container-fluid"> 4개의 게시판을 보여주는 container
   <div class="row">           1개의 row
-    <div class="col-sm-6">   sm크기의 6개의 행을 쓰겠다.
-      <table class="table"> 
+    <div class="col-sm-6">    sm크기의 행 6개를 활용한다. -> 6개의 행을 활용하는 column 2개를 쓴다. 1row를 2개의 부분으로 나눈다.
+      <table class="table">   행 6개의 크기에 <table> 하나를 넣는다.
       </table>
     </div>
     <div class="col-sm-6">
@@ -121,19 +123,30 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 
 
 ## table
+[table](https://getbootstrap.com/docs/4.4/content/tables/)  
+
+|Table|Tag|Mean|
+|:--|:--|:--|
+||`<table>`|table만드는 태그|
+||`<tr>`|table의 행 만드는 태그|
+||`<td>`|table의 열 만드는 태그|  
+
+아래의 `html`소스를 보면서 bootstrap의 활용한 `<table>`태그를 작성하는 방법을 볼 수 있다.  
+
+
 
 ```html
-<table class="table table-borderless table-hover">    border 없는 table
-    <thead>                                           hover되는 table
+<table class="table table-borderless table-hover">  borderless table , hover가능한 table
+    <thead>                                       
         <tr>
-            <td colspan="3" class="alert alert-info"><a href="">Menu1</a></td>
-        </tr>
-    </thead>
+            <td colspan="3" class="alert alert-info"><a href="">Menu1</a></td>  사용하는 열3개를 합친다. `alert-info`활용
+        </tr>  
+    </thead>                                                1개의 행에 3개의 열을 갖는 table 만드려 한다.
     <tbody>
-        <tr>
-            <th scope="row">게시글123123123123123123</th>
+        <tr>                                                <tr> 1개의 행
+            <th scope="row">게시글123123123123123123</th>    <td> 1개의 열
             <td>작성자</td>
-            <td class="text-right">
+            <td class="text-right">                        ".text-right"는 글자의 우측정렬을 하게 한다.
                 작성날짜
             </td>
         </tr>
@@ -160,4 +173,35 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
         </tr>
     </tbody>
 </table>
+```  
+
+## pagination  
+다양한 게시물을 올리는 사이트를 보면 페이지이동 섹션이 있다. bootstrap에서는 이것을 도와주는 [pagination](https://getbootstrap.com/docs/4.4/components/pagination/) 이 있다.  
+
+```html
+<!-- pagination set -->
+  <div class="black" style="height:30px"></div>          게시판 4개를 보여주는 container와 여백을 주기위한 <div>
+  <ul class="pagination justify-content-center">         bootstrap의 pagination활용 justify-content-center를 활용한 중앙 정렬
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>  .page-item을 활용한 리스트
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+  <!-- pagination end -->
+  ```  
+
+## footer  
+bootstrap은 footer에 대한 library는 없지만 다른 library를 활용하여 만들 수 있다. 아래에 빈 칸을 갖고 아래에 고정되는 footer을 만들고 싶다.  
+```html
+<footer class="d-flex justify-content-center align-items-end" style="height:10em;"> 
+ class를 통해 display:flex적용 // justify-content-center 중앙 정렬 // align-items-end 수평정렬을 끝부분에 적용//
+ height:10em을 통해 높이 설정  
+
+  <div class="text-monospace">Copyright(c) 2020 Duckey.Kim all rights reserved. .text-monospace를 통해 폰트 변경
+    <div class="text-center">                                                   .text-center를 통한 글자 중앙 정렬
+      <a href="mailto:#">duckey-kdh@google.com</a>
+    </div>
+  </div>
+</footer>
 ```
