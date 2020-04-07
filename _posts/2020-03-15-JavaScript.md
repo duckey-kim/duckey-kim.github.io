@@ -109,7 +109,23 @@ documnet.addEventListener("DOMContentLoaded",function(){
 지금까지 배운 것을 정리해보면 HTML을 로드하던중에 script문을 만나게 되면 HTML을 로드하는 것을 멈추고 Script문을 로딩하고 파싱하게 된다. 만약에 Script문이 적용되어야 하는 HTML의 요소보다 위에 위치하게 되면 원하는 동작은 실행되지 않을 것이다. 그렇기때문에 Script문을 HTML의 요소들을 다 로드한 뒤인 `</body>`위에 위치하거나 `DOMContentLoaded`을 통하여 HTML 요소가 모두 로드된 후에 JavaScript문이 로드 파싱하게 만들었다.  
 단! 이렇게 되면 HTML의 문서가 로드되기 전까지 JavaScript 코드는 로딩과 파싱이 진행되지 않는다. 결국 이 문제는 많은 JavaScript 코드를 다루는 웹페이지에서의 속도저하를 일으킬 수 밖에 없다.  
 
-## async
+## async 와 defer  
+둘다 비동기화로 JavaScript를 로딩하지만 `async`는  순서를 상관하지 않는다. `defer`는 순서를 중요시 한다. 만약 로딩해야대는 각각의 JavaScript가 연관관계가 있다면 `async`보다는 `defer`를 활용해야한다.  
+
+```javascript
+<script async src="js/vendor/jquery.js"></script>  3개의 .js중 어떤 것이 로드될지 모른다.
+
+<script async src="js/script2.js"></script>
+
+<script async src="js/script3.js"></script>
+---------------------------------------------
+<script defer src="js/vendor/jquery.js"></script>  jquery->script2->script3순으로 로딩된다.
+
+<script defer src="js/script2.js"></script>
+
+<script defer src="js/script3.js"></script>
+```
+
 
 
 
