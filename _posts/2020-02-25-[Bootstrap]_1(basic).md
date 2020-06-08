@@ -9,13 +9,15 @@ bootstrap의 버전을 잘 확인하자.한글어 버전의[bootstrap-korea](htt
 
 ## 내가 작성한 HTML에 bootstrap 적용시키기  
 bootstrap은 다양한 클래스를 통해서 css를 적용시킬 수 있는 라이브러리 라고 생각할 수 있다. 그 라이브러리를 불러오기위해서는 bootstrapCDN을 활용하면 된다.  
- 1. `html`의 `head`부분에 link태그를 통해 `bootstrap`의 `css`파일을 불러온다.  
+
+1. `html`의 `head`부분에 link태그를 통해 `bootstrap`의 `css`파일을 불러온다.  
 
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 ```  
 
- 2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/) 와 [popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.  
+
+2. `bootstrap`의 다양한 component들은 `javaScript`의 function을 활용한다. 그렇기 때문에 [jQuery](https://jquery.com/) 와 [popper](https://popper.js.org/)을 사용해야한다. `body`태그 끝부분에 처음에는 `jQuery`,`popper.js`,마지막으로 bootstrap의 plugin을 작성해 준다.  
 
 ```html
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -35,7 +37,7 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 부트스트랩은 기기나 뷰포트 크기가 증가함에 따라 **12열이** 적절하게 확대되는 반응형, 모바일 우선 유동 그리드 시스템입니다. 그것은 쉬운 레이아웃을 위해 미리 정해진 클래스들 뿐만 아니라 강력한 더 시멘틱한 레이아웃을 생성하기 위한 믹스인 을 포함하고 있습니다.  
 
 ***예제***  
-만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다. 
+만약에 같은크기의 2개의 열을 쓰고 싶다면 `.col-xs-6` 2개를 사용하면 된다.
 쉽게생각해서 12 나누기 원하는 갯수의 열을 나누어주고 사용하자  
 
 ## grid option  
@@ -55,12 +57,12 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 
 
 ## container  
-우리가 사용하던 `container`들은 items들을 wrap 하는데 많이 사용한다. bootstrap에서도 그런 용도로 사용되며 **반응형**으로 사용되는 `container`의 종류에는  2개가 있다.  
+우리가 사용하던 `container`들은 items들을 wrap 하는데 많이 사용한다. bootstrap에서도 그런 용도로 사용되며 **반응형** 으로 사용되는 `container`의 종류에는  2개가 있다.  
 1. `container` : 반응형으로써 media의 화면 크기의 따라서 크기가 정해져있다.  
 2. `container-fluid` : 반응형으로써 media의 화면 크기에 가득 채운다.  
 
 
-## pills 
+## pills
 `html5`에서 `nav`태그는 네비게이션 역할을 담당한다. `div`태그로 생성은 할 수 있지만 다른사람들에게도 통용되는 `nav`태그를 사용하였다.  
 `nav`의 종류에서도 bootstrap에서 `nav-pills`형태의 라이브러리를 활용한다.
 
@@ -88,13 +90,13 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 ## button  
 [button](https://getbootstrap.com/docs/4.4/components/buttons/)  
 
-`<button>`태그만이 아닌 `<a>`,`<input>` 태그에서도 `button`태그의 요소를 활용할 수 있다. `.btn`을 사용하여 `<a>`태그에 `.btn`클래스를 부여하면 사이트를 이어주는 역활을 할 수 있는 **Button**으로 구현이 된다.  
+`<button>`태그만이 아닌 `<a>`,`<input>` 태그에서도 `button`태그의 요소를 활용할 수 있다. `.btn`을 사용하여 `<a>`태그에 `.btn`클래스를 부여하면 사이트를 이어주는 역활을 할 수 있는 **Button** 으로 구현이 된다.  
 
 
 ### 계획과 실행  
 
 홈페이지에 들어왔을 때 4개의 메뉴에 최신 게시물들을 보여주는 board를 만들고 싶다.  
-그래서 하나의 row에 2개의 column이 들어가는 row로 형성하려고 한다. 그래서 2개의 row를 만들려고 했지만 어차피 viewport 또는 media의 크기에 따라 2개의 행일 될 수 도 있고 1개의 행이 될 수 도 있다. 그렇기 때문에 1개의 row로 묶어도 되고 2개의 row로 묶어도 된다. 
+그래서 하나의 row에 2개의 column이 들어가는 row로 형성하려고 한다. 그래서 2개의 row를 만들려고 했지만 어차피 viewport 또는 media의 크기에 따라 2개의 행일 될 수 도 있고 1개의 행이 될 수 도 있다. 그렇기 때문에 1개의 row로 묶어도 되고 2개의 row로 묶어도 된다.
 어차피 한개의 row는 12개의 columns으로 이루어져 있고 그것을 넘어가면 auto-flow가 되기 때문이다.  
 
 
@@ -194,7 +196,7 @@ media크기 또는 viewport 크기의 변화에 따른 적절한 렌더링과 �
 ## footer  
 bootstrap은 footer에 대한 library는 없지만 다른 library를 활용하여 만들 수 있다. 아래에 빈 칸을 갖고 아래에 고정되는 footer을 만들고 싶다.  
 ```html
-<footer class="d-flex justify-content-center align-items-end" style="height:10em;"> 
+<footer class="d-flex justify-content-center align-items-end" style="height:10em;">
  class를 통해 display:flex적용 // justify-content-center 중앙 정렬 // align-items-end 수평정렬을 끝부분에 적용//
  height:10em을 통해 높이 설정  
 
