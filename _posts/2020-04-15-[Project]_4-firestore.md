@@ -68,9 +68,7 @@ var allBoardsRef = db.collection("boards");
         });
       });
     })
-```
-contents 에 저장되는 데이터의 형태는
-![contents](contents.png)  
+```  
 
 ### 사용중 느낀점  
 collection 과 document의 boards , gossip, humor 등 의 name들을 `.id`로 얻을 수 있다.  
