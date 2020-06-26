@@ -5,7 +5,7 @@ JavaScript `Array` 에서 사용하는 `for`문이라고 생각하면 쉽다. �
 
 ### 간단한 forEach문 예제와 설명
 
-```JavaScript
+```javascript
 var int_Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 int_Array.forEach((a) => {
@@ -19,10 +19,10 @@ int_Array안에 있는 요소에 대하여 `for`문을 돌린다.`a`를 int_Arra
 `a%2==1`은 index가 홀 수 일때만 `if`문을 실행한다.
 만약 이 코드를 for문으로 작성한다면
 
-```JavaScript
+```javascript
 var int_Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for(var i=0;i<int_Array.length;i++){
-  if(i%2==1){
+for (var i = 0; i < int_Array.length; i++) {
+  if (i % 2 == 1) {
     console.log(int_Array[i]);
   }
 }
