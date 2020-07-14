@@ -3,7 +3,7 @@
 ## Date.now()
 나의 프로젝트에서 게시물을 올릴 때 시간에 대한 정보는 `uploadtime` 과 `lastmodified`에 저장을 한다. 그리고 저장시에는 `JavaScript` 의 `Date.now()`메소드를 활용한다.
 `Date.now()` 메소드는 UTC 기준으로 1970년 1월 1일 0시 0분 0초부터 현재까지 경과된 밀리 초를 반환합니다.
-<img src="javascript-timestamp.png">
+![timestamp](javascript-timestamp.png)
 
 위의 그림과 같이 저장되는 value의 값이 밀리초로 되어 있는 것을 볼 수 있다.
 
@@ -12,7 +12,7 @@
 
 ## Timestamp My format  
 
-```JavaScript
+```javascript
 String.prototype.string = function (len) {
   var s = "",
     i = 0;
