@@ -9,13 +9,13 @@ User가 작성한 글들을 서버 자체에 저장하는 것이 아닌 Firebase
 ### Firestore 의 특징
 
 Cloud Firestore의 큰 특징이라고 하면 유연하고 확장 가능한 `NoSQL` 클라우드 데이터베이스를 사용하고 이 데이터들은 `Collection`-`document` 의 계층적 구조를 띈다. 데이터들을 `document`에 저장이 되고 데이터들을 저장하고 있는 `document` 는 `Collection` 에 저장이 된다. 결국 데이터들이 저장이 되는 곳은 `document` 이고 저장되는 형태는 `JSON`과 매우 비슷하다.  
-<img src="/assets/img/structure-data.png" width="50%" height="50%">
+<img src="/assets/images/structure-data.png" width="50%" height="50%">
 
 ### Firestore의 data 가져오기
 
 Firestore의 data는 document에 저장이 된다. 그러면 data를 가져올때 data가 어떤 collection의 document에 저장이 되어있는지를 알아야한다. 나의 프로젝트에서는 "boards/category/posts/document"의 path로 저장을 하였다. collection은 boards,posts이고 document는 category,document들이 될것이다.
 컬렉션이나 문서에 필드가 아닌 posts,822\*\*~같이 작성된 부분들은 colleciont.id, document의 id => doc.id가 된다.
-![projectDataStructure](/assets/img/firestore-structure.png)
+![projectDataStructure](/assets/images/firestore-structure.png)
 Example)) `category` gossip 의 posts를 가져온다고 가정한다면
 
 ```javascript
